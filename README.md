@@ -32,6 +32,26 @@ Plenty of good advice about this is scattered across style guides, editing forum
 | [`rules.json`](rules.json) | The same rules in machine-readable form, for linters and other tooling. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to propose a new rule or change an existing one. |
 
+## Install
+
+Slopspeare is also an installable agent skill. With the [`skills` CLI](https://github.com/vercel-labs/skills):
+
+```bash
+npx skills add davidvictor/slopspeare
+```
+
+Global, no prompts:
+
+```bash
+npx -y skills add davidvictor/slopspeare -g -y
+```
+
+Preview without installing:
+
+```bash
+npx skills add davidvictor/slopspeare --list
+```
+
 ## How to use it
 
 **Writing or editing your own work.** Read [`RULES.md`](RULES.md) once to learn the patterns. After that, draft freely and run [`CHECKLIST.md`](CHECKLIST.md) before you publish. Most of the tells are findable with a text search, and the checklist lists the strings to grep for.
@@ -39,6 +59,29 @@ Plenty of good advice about this is scattered across style guides, editing forum
 **Reviewing someone else's work.** Cite rule IDs in your comments. "This is `RHET-1`" is faster than re-explaining the contrast pattern every time, and it points the writer at the reasoning.
 
 **Editing with an AI assistant.** Paste [`RULES.md`](RULES.md) or [`CHECKLIST.md`](CHECKLIST.md) into the system prompt, or point your agent at this repo. The rules are written to be machine-followable, and [`rules.json`](rules.json) gives a structured version a tool can consume directly.
+
+## Use as a skill
+
+Once installed, point it at any prose draft. It cites each tell by rule ID,
+severity, and a minimal fix, and it can apply the fixes.
+
+Commands:
+
+- **scan** (default). Audit the draft and report findings by rule ID and severity.
+  The triage default shows hard bans and strong defaults; `scan all` adds
+  guidelines.
+- **fix.** Edit the draft. Bare `fix` applies hard bans and strong defaults and
+  reports a per-rule changelog. `fix hard`, `fix all`, and `fix RHET-1,PUNCT-1` set
+  the scope. Given a file path, it edits in place.
+- **score.** The tier counts and a one-line read.
+- **comment.** Findings as paste-ready review citations for a pull request.
+
+For project-specific rules, drop a `slopspeare.local.md` in your repo and the skill
+layers it on top of the public catalog. See `slopspeare.local.example.md`.
+
+For always-on scanning of an agent's own drafts, add a `Stop` hook in your
+`settings.json` that runs the skill. The skill activates on request, so the hook is
+what makes it run on every turn.
 
 ## The strictness model
 
