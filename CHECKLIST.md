@@ -31,6 +31,8 @@ Search your draft for the literal strings in the "grep" lines. Most slop is find
 - [ ] **Jargon glossed** on first use. (`SUBST-8`)
 - [ ] **Opinion shows; hedging cut.** No "it could be argued," no relentless positivity. (`TONE-1`, `TONE-2`)
 - [ ] **No emoji, hashtags, or over-bolding** unless requested. (`FORMAT-1`, `FORMAT-2`)
+- [ ] **No vanity counts.** Drop "79 rules," "10x," "trusted by thousands" unless the number changes a decision. (`SUBST-15`)
+- [ ] **No assumed-hygiene claims.** Drop "deduplicated," "rigorously tested," "production-grade." (`RHET-12`)
 
 ## Cadence and shape
 
@@ -40,7 +42,7 @@ Search your draft for the literal strings in the "grep" lines. Most slop is find
 - [ ] **No rule-of-three triplets** unless the three items are genuinely distinct. (`STRUCT-6`)
 - [ ] **Headings vary** and make a claim, never just label the topic; sentence case. (`FORMAT-6`, `FORMAT-3`)
 
-## The three tests
+## The tests
 
 - [ ] **Deletion test.** Every remaining sentence carries information, not just rhythm. (`REVISE-1`)
 - [ ] **Name-swap test.** At least one line could belong to no one else. (`REVISE-2`)

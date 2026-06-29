@@ -11,7 +11,7 @@
 
 A field guide to removing AI slop from writing.
 
-Slopspeare is a single, deduplicated set of rules for spotting the patterns that make text read as machine-generated, and for replacing them with writing that reads as a specific human. It covers prose: bios, landing-page copy, case studies, docs, blog posts, social posts, release notes, and anything else where the writing should sound like a person.
+Slopspeare is a set of rules for spotting the patterns that make text read as machine-generated, and for replacing them with writing that reads as a specific human. It covers prose: bios, landing-page copy, case studies, docs, blog posts, social posts, release notes, and anything else where the writing should sound like a person.
 
 The name is a joke about the gap between the two. The rules are not.
 
@@ -19,13 +19,13 @@ The name is a joke about the gap between the two. The rules are not.
 
 Language models reach for the most probable next word, so their writing converges on a recognizable register: inflated vocabulary, contrast pivots, tidy three-part lists, em dashes everywhere, and conclusions that wrap every thought in a bow. Each tell is small. Together they make writing feel generic and unearned, and readers now spot the pattern fast.
 
-Plenty of good advice about this is scattered across style guides, editing forums, and the prompt files people use with their own AI tools. Slopspeare gathers that advice into one place, removes the duplicates, resolves the cases where sources disagree, and explains the reason behind each rule so you can apply judgment instead of following a list blindly.
+Plenty of good advice about this is scattered across style guides, editing forums, and the prompt files people use with their own AI tools. Slopspeare gathers it into one place and explains the reason behind each rule, so you can apply judgment instead of following a list blindly.
 
 ## What's here
 
 | File | What it is |
 | --- | --- |
-| [`RULES.md`](RULES.md) | The full rule set. 79 rules across 8 categories, each with a reason and a before/after. The canonical document. |
+| [`RULES.md`](RULES.md) | Each rule, why it reads as AI, and how to fix it. The source of truth. |
 | [`CHECKLIST.md`](CHECKLIST.md) | A printable final-pass checklist. Run it before you deliver anything. |
 | [`docs/quick-reference.md`](docs/quick-reference.md) | A one-screen cheat sheet of the worst tells and instant fixes. |
 | [`CONFLICTS.md`](CONFLICTS.md) | Where the source material disagreed, and how the guide resolved it. |
@@ -58,11 +58,11 @@ Slopspeare is about written prose. It does not cover visual design, code style, 
 
 Slopspeare started as a private correction loop. The same handful of tells kept showing up in my own drafts and in everything my AI tools wrote for me: the em dash bridging every other sentence, the "X, not Y" contrast reflex, the puffed-up vocabulary that turns any sentence into a press release. I would fix them, and they would come back in the next draft.
 
-So I wrote the rules down. Then I noticed the same guidance was scattered across my notes, my portfolio repo, and a stack of installed tools, often disagreeing with itself. This repo is the deduplicated, conflict-resolved version of all of it, generalized so anyone can use it.
+So I wrote the rules down. Then I noticed the same guidance was scattered across my notes, my portfolio repo, and a stack of installed tools, often disagreeing with itself. This repo pulls all of it into one place, generalized so anyone can use it.
 
 ## Credits and sources
 
-This guide is a synthesis. It aggregates and reconciles rules from:
+This guide is a synthesis. It draws on:
 
 - Public catalogs of AI writing tells, including Wikipedia's "Signs of AI writing," GPTZero's overused-vocabulary research, and community editing notes.
 - The `humanize-writing` editing skill and its AI-patterns dictionary.

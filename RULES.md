@@ -168,6 +168,14 @@ Framing a task as needing a person with your precise background is a credentiali
 - *Avoid:* A designer who could think about both layers had to make the call.
 - *Prefer:* I worked the problem from both the design and the data side.
 
+### RHET-12. Do not claim the process hygiene the reader already assumes
+**Strong default.**
+
+Describing routine hygiene as if it were an achievement reads as filler, because the reader already assumes it, and it protests too much. Watch for "deduplicated," "rigorously tested," "carefully reviewed," "fully optimized," "production-grade," and "battle-tested." State process only when it is user-relevant, verifiable, and needed to use the thing. Otherwise let the work imply it. This is the process-claim sibling of RHET-10.
+
+- *Avoid:* A deduplicated, rigorously reviewed, production-grade rule set.
+- *Prefer:* A rule set. (Or, when it is real and useful: "Where sources disagreed, the call is recorded in CONFLICTS.md.")
+
 ---
 
 ## 3. Vocabulary
@@ -380,6 +388,14 @@ Reflexively attaching a metric to every claim produces hollow vanity numbers tha
 **Guideline.**
 
 Not every idea needs a landing. Forced resolution on every point reads as machine tidiness. "I'm still figuring this out" is often the most honest and most compelling option available.
+
+### SUBST-15. Do not anchor on arbitrary or non-functional numbers
+**Strong default.**
+
+A count cited for authority ("79 rules," "10x engineers," "trusted by thousands") reads as scale-flexing, and it goes stale the moment the thing changes. Cite a number only when it changes a decision, marks a real constraint, or the reader needs it to understand the thing. This sharpens SUBST-13, and it is the counterweight to SUBST-1: keep the load-bearing number, drop the vanity one.
+
+- *Avoid:* A guide with 79 rules across 8 categories.
+- *Prefer:* A guide to the patterns that make writing read as AI.
 
 - *Avoid:* Ultimately, balance is what matters most.
 - *Prefer:* I still don't know if we made the right call.

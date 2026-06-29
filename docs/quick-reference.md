@@ -2,7 +2,7 @@
 
 One screen. The tells that matter most, with the instant fix. Full reasoning lives in [`../RULES.md`](../RULES.md).
 
-## The twelve worst tells
+## The worst tells
 
 | Tell | Fix | Rule |
 | --- | --- | --- |
@@ -18,6 +18,8 @@ One screen. The tells that matter most, with the instant fix. Full reasoning liv
 | Every paragraph wraps in a tidy bow | Let some thoughts just end | `SUBST-14` |
 | Three sentences, same shape, in a row | Vary length and opening | `STRUCT-1` |
 | "As an AI…", "I hope this helps!" | Delete entirely | `REVISE-10` |
+| "79 rules", "10x faster", "trusted by thousands" | Cut, unless the number changes a decision | `SUBST-15` |
+| "deduplicated", "rigorously tested", "production-grade" | Cut the hygiene the reader already assumes | `RHET-12` |
 
 ## The instant rewrite pattern
 
