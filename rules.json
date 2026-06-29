@@ -1,0 +1,737 @@
+{
+  "name": "Slopspeare",
+  "version": "1.0.0",
+  "description": "A field guide to removing AI slop from writing.",
+  "license": "CC-BY-4.0",
+  "canonicalSource": "RULES.md",
+  "note": "Generated from RULES.md by scripts/build-rules-json.mjs. Do not edit by hand.",
+  "strictnessLevels": [
+    "hard-ban",
+    "strong-default",
+    "guideline"
+  ],
+  "categories": [
+    "Punctuation",
+    "Rhetorical tells",
+    "Vocabulary",
+    "Substance and specificity",
+    "Sentence and paragraph craft",
+    "Tone and voice",
+    "Formatting and mechanics",
+    "Revision discipline"
+  ],
+  "ruleCount": 79,
+  "rules": [
+    {
+      "id": "PUNCT-1",
+      "category": "Punctuation",
+      "strictness": "hard-ban",
+      "title": "Do not use em dashes or en dashes as in-sentence punctuation",
+      "why": "The in-sentence em dash is the most recognizable signature of machine-generated prose. Editors now call it the \"ChatGPT dash.\" It is also the delivery mechanism for other tells: the contrast pivot, the dramatic aside, the tacked-on qualifier. Use a period, a comma, or a colon. If a sentence only holds together because a dash is bridging two halves, that sentence usually wants to be two sentences or wants a colon.",
+      "avoid": "The product shipped — and the team moved faster after.",
+      "prefer": "The product shipped. The team moved faster after."
+    },
+    {
+      "id": "PUNCT-2",
+      "category": "Punctuation",
+      "strictness": "guideline",
+      "title": "Use the dash only as a numeric range separator",
+      "why": "Between two numbers, a dash is doing typographic range work, not sentence punctuation, so it carries none of the tell. That is the one place it stays.",
+      "avoid": "the work ran from 2024 to 2026",
+      "prefer": "2024–2026"
+    },
+    {
+      "id": "PUNCT-3",
+      "category": "Punctuation",
+      "strictness": "strong-default",
+      "title": "Do not use colons or question marks as dramatic reveal devices",
+      "why": "The dramatic colon reveal and the rhetorical-question reveal both stage a small theatrical pause that machine prose overuses. Weave the point into a normal sentence and the staged drama disappears.",
+      "avoid": "The result: a complete mess.",
+      "prefer": "It fell apart completely."
+    },
+    {
+      "id": "PUNCT-4",
+      "category": "Punctuation",
+      "strictness": "guideline",
+      "title": "Keep exclamation marks rare",
+      "why": "Frequent exclamation marks read as overenthusiastic marketing and undercut a steady, confident tone. One per page is plenty. Often zero is correct. ---",
+      "avoid": "I love this work! It's the best thing I've built! Take a look!",
+      "prefer": "I care about this work. Here is some of it."
+    },
+    {
+      "id": "RHET-1",
+      "category": "Rhetorical tells",
+      "strictness": "hard-ban",
+      "title": "Do not use the \"X, not Y\" contrast pattern in any form",
+      "why": "Defining something by negating a foil performs insight instead of stating it, and it appears far more often in machine text than in human writing. Once a reader notices it, every instance looks manufactured. Catch all the variants: the comma form: \"a teammate, not a vendor\" the parenthetical: \"a teammate (not a vendor)\" the paragraph-break form: \"Not a vendor. A teammate.\" the soft form: \"not just a tool, but a teammate\" the escalation: \"this isn't X, it's Y\" / \"it's not about X, it's about Y\" the negated parallel: \"they don't want a vendor. They want a teammate.\" If a genuine contrast is load-bearing, give each side its own sentence with a real reason. If only one side matters, state it and drop the foil.",
+      "avoid": "It's a teammate, not a vendor.",
+      "prefer": "It works like a teammate."
+    },
+    {
+      "id": "RHET-2",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not use \"I'd rather X than Y\" preference framing",
+      "why": "The rather-than inversion performs taste instead of stating it. It is the same reflex as the contrast pivot. A direct or collaborative claim lands harder.",
+      "avoid": "I'd rather raise the ceiling for the people I work with than be the ceiling for them.",
+      "prefer": "We all win when we raise the ceiling for each other."
+    },
+    {
+      "id": "RHET-3",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not open by taking down the field",
+      "why": "The \"most people get this wrong, but we…\" opener positions the subject by criticizing everyone else. It reads as a generated hot take. Describe what you did and let any comparison stay implicit.",
+      "avoid": "Most AI products never publish their accuracy numbers.",
+      "prefer": "We publish our accuracy numbers because they hold up."
+    },
+    {
+      "id": "RHET-4",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not open with a numeric thesis stamp",
+      "why": "Compressed slogan stamps like \"Eleven services, one builder\" read as marketing-deck positioning rather than substance, especially when one side is an abstraction. Open with the situation as you found it, in plain language.",
+      "avoid": "Two problems, one engagement.",
+      "prefer": "They had a broken front end and a team that was new to AI."
+    },
+    {
+      "id": "RHET-5",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not open with a stock scene-setter",
+      "why": "\"In today's fast-paced world,\" \"In the ever-evolving landscape of,\" and \"In an era where\" are the canonical machine essay openers. They say nothing and signal everything. Start with the actual point.",
+      "avoid": "In today's fast-paced digital landscape, teams need better tools.",
+      "prefer": "Our support team was answering the same question forty times a day."
+    },
+    {
+      "id": "RHET-6",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not use a rhetorical question followed by its own answer",
+      "why": "The question-then-answer move is a transition device that machine prose deploys every few paragraphs. Lead with the answer and state the point directly.",
+      "avoid": "What does this mean in practice? It means teams need autonomy.",
+      "prefer": "Teams need autonomy."
+    },
+    {
+      "id": "RHET-7",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Drop dramatic reveals and theatrical setups",
+      "why": "\"Here's the thing,\" \"Here's what nobody tells you,\" \"Let's dive in,\" \"Let's unpack this,\" and \"Buckle up\" are content-marketing patterns that rarely appear in natural writing. They promise a drumroll the content has to pay off and usually does not. Start with the substance.",
+      "avoid": "Here's the thing: most teams get onboarding wrong.",
+      "prefer": "Most teams get onboarding wrong."
+    },
+    {
+      "id": "RHET-8",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Cut slogan resolutions and aphorisms at section ends",
+      "why": "A tied-bow closer that sums the section up reads as a generated essay ending. The same goes for a labeled \"Conclusion:\" or \"Overall,\" paragraph. These lines could appear in any piece on any topic. Drop them, or replace them with a sentence that adds new information.",
+      "avoid": "AI-assisted, human-directed.",
+      "prefer": "(cut it, or end on the last real point)"
+    },
+    {
+      "id": "RHET-9",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Cut justification and contrast tails from declarative sentences",
+      "why": "Trailing clauses that justify a claim (\"which teams actually trust,\" \"instead of pulling apart,\" \"that keeps it from drifting\") are the scaffolding that makes prose read as machine-written even when each clause is individually defensible. Trust the reader to infer the why. The test: if you can cut the clause and still mean what you meant, cut it.",
+      "avoid": "It keeps the product from drifting between hand-offs, which teams actually trust.",
+      "prefer": "It keeps the product from drifting between hand-offs."
+    },
+    {
+      "id": "RHET-10",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not announce that the work matters; show it",
+      "why": "Meta-language like \"load-bearing,\" \"the most opinionated piece,\" \"a pivotal moment,\" and \"a testament to\" declares importance instead of demonstrating it. Strip the meta sentence and let the content carry the weight. If the work matters, the reader will see it.",
+      "avoid": "This is the load-bearing, most opinionated part of the system.",
+      "prefer": "(describe what the part does, and let the reader judge)"
+    },
+    {
+      "id": "RHET-11",
+      "category": "Rhetorical tells",
+      "strictness": "strong-default",
+      "title": "Do not claim the work needed someone with your exact qualifications",
+      "why": "Framing a task as needing a person with your precise background is a credentialing flourish that brags while pretending to describe. Watch for \"only a [role] who,\" \"the rare [role] who,\" and \"it took someone with real taste.\" Name what the work required, not who was qualified to do it. ---",
+      "avoid": "A designer who could think about both layers had to make the call.",
+      "prefer": "I worked the problem from both the design and the data side."
+    },
+    {
+      "id": "VOCAB-1",
+      "category": "Vocabulary",
+      "strictness": "hard-ban",
+      "title": "Cut the sight-words: the highest-signal machine vocabulary",
+      "why": "A specific set of words appears at abnormal rates in model output and almost never in unforced human writing. Cut them on sight and rewrite around them: delve, tapestry, landscape (figurative), pivotal, underscore, testament, intricate / intricacies, meticulous, multifaceted, embark, spearhead, bolster, garner, interplay, realm, labyrinth, symphony",
+      "avoid": "We embarked on a meticulous journey to delve into this intricate tapestry.",
+      "prefer": "We started digging into how the pieces fit together."
+    },
+    {
+      "id": "VOCAB-2",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Use the watchlist words at most once, and only when literal",
+      "why": "These are real words that humans use, but models overuse them, and clustering or repeating them is itself the tell. Keep one only when it is the plainest accurate word (for example, \"comprehensive test coverage\" is fine; \"comprehensive, robust, cutting-edge solution\" is not): crucial, robust, comprehensive, vibrant, foster, enhance, leverage, navigate, resonate, illuminate, showcase, enduring, holistic, innovative, dynamic, seamless, cutting-edge, game-changer",
+      "avoid": "Leverage this robust, seamless, cutting-edge solution to enhance outcomes.",
+      "prefer": "Use this to make the process smoother."
+    },
+    {
+      "id": "VOCAB-3",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Cut empty corporate buzzwords and founder-deck clichés",
+      "why": "Words like leverage, utilize, synergy, stakeholder, best practices, deliverables, cross-functional, force multiplier, table stakes, and \"passionate about\" carry no concrete meaning and read as borrowed marketing language. Replace them with plain action verbs: built, designed, shipped, led, ran.",
+      "avoid": "Passionate about leveraging best practices to drive stakeholder synergy.",
+      "prefer": "I care about how things work, and I do what makes sense for the problem."
+    },
+    {
+      "id": "VOCAB-4",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Avoid hand-wave verbs that name no mechanism",
+      "why": "Transform, empower, enable, leverage, streamline, and optimize gesture at impact without saying what actually changed, so any subject sounds generic. State the real change. If you keep one, attach a concrete result.",
+      "avoid": "AI-powered SQL that empowers teams.",
+      "prefer": "AI-assisted SQL that cut query-writing time from twenty minutes to two."
+    },
+    {
+      "id": "VOCAB-5",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Delete phrases that announce instead of doing",
+      "why": "\"In conclusion,\" \"In summary,\" \"It's worth noting that,\" and \"It's important to understand that\" are filler that narrate an action rather than perform it. Just conclude, summarize, or state the thing. A literal \"Conclusion:\" heading on a short piece is the same tell in heading form.",
+      "avoid": "It's important to note that the deadline is Friday.",
+      "prefer": "The deadline is Friday."
+    },
+    {
+      "id": "VOCAB-6",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Cut academic connectors used as glue",
+      "why": "\"Furthermore,\" \"Moreover,\" \"Additionally,\" \"Consequently,\" \"Subsequently,\" and \"Hence\" cluster in machine text to simulate logical flow. Cap formal transitions at roughly two per piece. Often the cleanest connector is none: just start the next sentence.",
+      "avoid": "Furthermore, the migration reduced errors. Moreover, it sped up deploys.",
+      "prefer": "The migration reduced errors. It also sped up deploys."
+    },
+    {
+      "id": "VOCAB-7",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Cut adjective stacks",
+      "why": "Pairs and triplets of adjectives (\"real, measurable profit\") inflate prose without adding information. One adjective, or none, usually carries the meaning.",
+      "avoid": "real, measurable profit",
+      "prefer": "profit"
+    },
+    {
+      "id": "VOCAB-8",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Cut hedges and softeners that draw no real distinction",
+      "why": "\"Start to,\" \"this generation of,\" \"for a stretch,\" \"to some extent,\" \"it could be argued that,\" \"essentially,\" and \"basically\" dilute a claim without adding meaning. Keep a qualifier only when it marks a genuine distinction.",
+      "avoid": "those layers start to inform each other",
+      "prefer": "those layers inform each other"
+    },
+    {
+      "id": "VOCAB-9",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Replace vague-scale quantifiers with the real number",
+      "why": "\"Multiple,\" \"numerous,\" \"several,\" \"a handful,\" and \"some\" read as imprecise filler. Use the exact figure when you have it. Use a scaled word (dozens, thousands) only when the precise count is genuinely unverifiable.",
+      "avoid": "several backtested bets across multiple prop types",
+      "prefer": "28,000 backtested bets across every prop type"
+    },
+    {
+      "id": "VOCAB-10",
+      "category": "Vocabulary",
+      "strictness": "strong-default",
+      "title": "Find and ban your own recurring crutch phrases",
+      "why": "Any pet phrase that recurs across your drafts becomes its own tell once a reader spots the repetition. A phrase that asserts scope (\"every layer in one head\") is worse, because it claims rather than shows. Name the actual thing instead.",
+      "avoid": "He kept every layer in one head.",
+      "prefer": "I owned the design, the build, and the brand."
+    },
+    {
+      "id": "VOCAB-11",
+      "category": "Vocabulary",
+      "strictness": "guideline",
+      "title": "Prefer the broader universal word when meaning is preserved",
+      "why": "Insider terms narrow the audience without earning precision. When the plainer word loses nothing, use it. ---",
+      "avoid": "beta build",
+      "prefer": "demo"
+    },
+    {
+      "id": "SUBST-1",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Choose specificity over abstraction",
+      "why": "Models regress to the mean, smoothing facts into vague generalities. Specific figures, proper nouns, named tools, and before/after deltas carry weight that adjectives cannot, and they make writing credible and memorable.",
+      "avoid": "improved performance significantly",
+      "prefer": "cut load time from 4.2s to 800ms"
+    },
+    {
+      "id": "SUBST-2",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Earn every claim; show a quality instead of asserting it",
+      "why": "\"Thoughtful,\" \"rigorous,\" \"creative,\" and \"passionate\" are claims the writing itself has to demonstrate. If you have to say the work is thoughtful, it usually isn't. A concrete project proves the quality better than the adjective.",
+      "avoid": "I'm a passionate, creative designer.",
+      "prefer": "I designed the embeddable web player widget for Apple Music."
+    },
+    {
+      "id": "SUBST-3",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "The name-swap test: write what only you could write",
+      "why": "If someone could paste their own name over a sentence and it would still be true, the sentence carries no information. Interchangeable copy is the working definition of slop. Every piece needs at least one detail, belief, or specific that could belong to no one else.",
+      "avoid": "A results-driven designer dedicated to crafting user-centered experiences.",
+      "prefer": "I design and build products end to end, from research through production React."
+    },
+    {
+      "id": "SUBST-4",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Name the mechanism, the failure mode, and the trade-off",
+      "why": "Vague risk language (\"problems may arise under certain conditions\") and metaphors for difficulty (\"the front end couldn't hold the weight\") substitute imagery for facts. Name the real constraint, the real failure, and what was given up. \"We chose X over Y because Z, and the cost was W\" is the standard to aim for.",
+      "avoid": "Without this, problems may arise under certain conditions.",
+      "prefer": "Without the lock, two workers grab the same job and the customer gets charged twice."
+    },
+    {
+      "id": "SUBST-5",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Tie a technical claim to an outcome the reader feels",
+      "why": "An abstract technical description with no stated consequence is filler. Close on what the reader sees, loses, waits for, or can now do.",
+      "avoid": "This refactors the caching layer for improved efficiency.",
+      "prefer": "This caches the session, so repeat page loads drop from 800ms to 60ms."
+    },
+    {
+      "id": "SUBST-6",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Show the reasoning behind a decision",
+      "why": "A list of outcomes reads thin. A list of steps reads like a junior task log. Stating the belief or insight behind a decision shows judgment, which is what reads as a real person. Lead with why before what.",
+      "avoid": "Then I made the wireframes, then the mockups, then the prototype.",
+      "prefer": "We cut the settings page in half, knowing power users would complain, because new users were drowning in it."
+    },
+    {
+      "id": "SUBST-7",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Set up the principle, then land it on something concrete",
+      "why": "The abstract-then-concrete shape is how human writing earns a general claim: state the idea, then ground it in one tangible detail. A general claim left floating reads as generated; the same claim with a specific anchor reads as lived.",
+      "avoid": "Good infrastructure is about resilience and reliability at scale.",
+      "prefer": "Good infrastructure is boring on purpose. Ours has paged someone twice in two years."
+    },
+    {
+      "id": "SUBST-8",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Gloss jargon on first use",
+      "why": "Unexplained jargon makes a non-expert reader bounce, and it can signal copy-pasted padding. Give every specialized term a one-clause plain-language anchor the first time it appears, even when the reader supplied the term.",
+      "avoid": "score the row in logit space",
+      "prefer": "score the row in log-odds, where adding numbers is meaningful"
+    },
+    {
+      "id": "SUBST-9",
+      "category": "Substance and specificity",
+      "strictness": "guideline",
+      "title": "Find the through-line; do not recite a timeline",
+      "why": "For any narrative about a person or a project, the interesting thing is the thread that connects the events, not the chronology. A list of roles or milestones in order reads as a résumé in paragraph form. Name the question the work keeps answering, and frame a winding path as the asset it usually is.",
+      "avoid": "I worked at A, then B, then C, then D.",
+      "prefer": "I keep ending up on the same problem at bigger scales: how do you keep software simple as it grows?"
+    },
+    {
+      "id": "SUBST-10",
+      "category": "Substance and specificity",
+      "strictness": "hard-ban",
+      "title": "Never fabricate self-criticism, hindsight, or reflection",
+      "why": "Inventing regrets or a \"what I'd do differently\" the author never expressed is worse than ordinary filler, because it puts false thoughts in a real person's mouth. Omit reflection unless the author asked for it. When reflection is genuine, keep it specific and true rather than a hollow flaw inserted for shape.",
+      "avoid": "Looking back, I'd probably have structured the whole thing differently.",
+      "prefer": "The biggest surprise was that the data model, not the UI, caused most of the confusion."
+    },
+    {
+      "id": "SUBST-11",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Do not invent pull-quotes or memorable lines",
+      "why": "A pull-quote has to be a phrase already in the body or a real attribution, never a manufactured or paraphrased line. Inventing quotable lines from nothing is a hallmark of padded copy. The same applies to transferable aphorisms that could headline any piece.",
+      "avoid": "\"If the tool is fighting you at hour six, the tool is wrong.\" (when nobody said it)",
+      "prefer": "(quote a line the source actually contains, or cut the pull-quote)"
+    },
+    {
+      "id": "SUBST-12",
+      "category": "Substance and specificity",
+      "strictness": "strong-default",
+      "title": "Prefer honest proportions over cute symmetry",
+      "why": "An almost-true clever phrase is worse than the plain proportion. Do not reach for symmetry or decorative math when the real numbers tell a more honest story.",
+      "avoid": "at least as many years deep in the work as I have above it",
+      "prefer": "many years deep in the work and several above it"
+    },
+    {
+      "id": "SUBST-13",
+      "category": "Substance and specificity",
+      "strictness": "guideline",
+      "title": "Quantify only when the number is load-bearing",
+      "why": "Reflexively attaching a metric to every claim produces hollow vanity numbers that read as padding. Reserve quantification for figures that actually carry weight, and describe qualitative impact otherwise.",
+      "avoid": "Improved engagement by 3% and touched 12 user flows.",
+      "prefer": "Delivered to more than 10 million users."
+    },
+    {
+      "id": "SUBST-14",
+      "category": "Substance and specificity",
+      "strictness": "guideline",
+      "title": "Leave some thoughts unresolved",
+      "why": "Not every idea needs a landing. Forced resolution on every point reads as machine tidiness. \"I'm still figuring this out\" is often the most honest and most compelling option available. ---",
+      "avoid": "Ultimately, balance is what matters most.",
+      "prefer": "I still don't know if we made the right call."
+    },
+    {
+      "id": "STRUCT-1",
+      "category": "Sentence and paragraph craft",
+      "strictness": "strong-default",
+      "title": "Vary sentence length and opening construction",
+      "why": "Models pick the most likely pattern, so sentence length comes out uniform and openers repeat. Mix long sentences with short ones, and do not open three sentences or three paragraphs in a row the same way.",
+      "avoid": "The plan was solid. The team was ready. The launch went well. The numbers were good.",
+      "prefer": "The plan was solid, and after weeks of back-and-forth the team finally felt ready. Then we launched. It worked."
+    },
+    {
+      "id": "STRUCT-2",
+      "category": "Sentence and paragraph craft",
+      "strictness": "strong-default",
+      "title": "Do not stack fragments for rhythm or punch",
+      "why": "Strings of clipped fragments (\"Real money. Real edge.\") read as performative, a crutch rather than a real choice. If a thought is worth saying, give it a full sentence. Default to medium-length sentences that build on each other. Reserve a single short sentence for genuine impact.",
+      "avoid": "We shipped it. It worked. Users loved it.",
+      "prefer": "We shipped it, and once a few rough edges were sanded down, it held up well enough that people started relying on it."
+    },
+    {
+      "id": "STRUCT-3",
+      "category": "Sentence and paragraph craft",
+      "strictness": "guideline",
+      "title": "Vary rhythm on purpose: short to state, longer to illustrate, short to land",
+      "why": "This is the constructive counterpart to STRUCT-2, not a license for a wall of one-liners. A backbone of short declaratives punctuated by longer sentences that carry the specifics reads as crafted human prose. Uniform length reads mechanically whether it is all short or all long.",
+      "avoid": "I build things. Quality matters. I ship work. I have taste. I lead teams.",
+      "prefer": "Quality matters. You can only build something great if you design it for someone in particular, which means saying no to almost everyone else. That is the whole job."
+    },
+    {
+      "id": "STRUCT-4",
+      "category": "Sentence and paragraph craft",
+      "strictness": "strong-default",
+      "title": "Prefer first-person active voice",
+      "why": "Active voice names who did what and owns the work. Passive voice (\"the foundation was rebuilt\") hides the actor and reads as evasive résumé-speak. \"Was responsible for\" is the worst offender.",
+      "avoid": "The foundation was rebuilt.",
+      "prefer": "I rebuilt the foundation."
+    },
+    {
+      "id": "STRUCT-5",
+      "category": "Sentence and paragraph craft",
+      "strictness": "strong-default",
+      "title": "Break mirror structures",
+      "why": "Perfect structural symmetry in back-to-back sentences is a model favorite. Make the second item different in shape, length, or angle. This also applies to matched parallel clauses inside quotes, which read as constructed rather than spoken.",
+      "avoid": "Engineers want clarity. Managers want context.",
+      "prefer": "Engineers want clarity. For managers it is more about context, the stuff around a decision that you cannot see from outside."
+    },
+    {
+      "id": "STRUCT-6",
+      "category": "Sentence and paragraph craft",
+      "strictness": "strong-default",
+      "title": "Limit anaphora and rule-of-three triplets",
+      "why": "Three or more sentences opening with the same word (\"No memory. No restraint. No feedback loop.\") read as a tic, and so do groups of three nouns or phrases (\"research, collaboration, and problem-solving\") used for the feel of completeness. A triplet is fine only when the three items are substantively distinct and each is doing real work. Budget at most one such cluster per section.",
+      "avoid": "It was vibrant, dynamic, and innovative.",
+      "prefer": "It was fast, and people actually used it."
+    },
+    {
+      "id": "STRUCT-7",
+      "category": "Sentence and paragraph craft",
+      "strictness": "guideline",
+      "title": "Drop a very short sentence into dense passages",
+      "why": "A six-word sentence after an inventory, or between a problem and a pivot, gives the reader a beat and breaks a run of long sentences. Place it where a reader is most likely to lose the thread.",
+      "avoid": "",
+      "prefer": "I rebuilt the foundation. (dropped in after a long list of what was broken)"
+    },
+    {
+      "id": "STRUCT-8",
+      "category": "Sentence and paragraph craft",
+      "strictness": "guideline",
+      "title": "Start a sentence with \"And\" or \"But\" sometimes",
+      "why": "People write this way when they are not worried about grammar-class rules, and it creates a conversational rhythm that uniformly formal prose cannot reach. Some style guides discourage it; use it anyway, in moderation. ---",
+      "avoid": "However, the result surprised everyone.",
+      "prefer": "But it surprised everyone."
+    },
+    {
+      "id": "TONE-1",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Let the author's real opinion show",
+      "why": "Models hedge to appear balanced and give every perspective equal weight. Human writers have opinions and lean into them. If the text makes an argument, let it argue. State beliefs plainly without \"I think\" or \"perhaps\" padding.",
+      "avoid": "It could be argued that remote work has some benefits.",
+      "prefer": "Remote work made us faster."
+    },
+    {
+      "id": "TONE-2",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Avoid sycophantic, over-positive tone and obsequious preambles",
+      "why": "Models default to enthusiasm (\"Great question!\", \"Certainly! Here's…\", \"This is a fantastic approach!\") and to relentless optimism. Humans are more measured and sometimes blunt. Cut the manufactured certainty, and be willing to say what did not work.",
+      "avoid": "This was a complete success and a clear win on every dimension.",
+      "prefer": "I think this worked, though a couple of the assumptions behind it still make me nervous."
+    },
+    {
+      "id": "TONE-3",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Never let copy read like a press release",
+      "why": "If a sentence could appear unchanged in a corporate blog post, it is generic and impersonal. Write like a builder talking to a peer, not a consultant presenting to a client.",
+      "avoid": "We are thrilled to leverage our world-class expertise to deliver best-in-class solutions.",
+      "prefer": "We built it because the old one kept breaking."
+    },
+    {
+      "id": "TONE-4",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Do not narrate technical systems with cute metaphors or personification",
+      "why": "Metaphorical narration of technical behavior (\"the CMS absorbed the chaos\") performs craft instead of demonstrating it. State plainly what the system does. First-person ownership beats personification.",
+      "avoid": "The CMS absorbed the chaos.",
+      "prefer": "The CMS queued the incoming requests and processed them in order."
+    },
+    {
+      "id": "TONE-5",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Drop thought-leadership framing",
+      "why": "\"I learned,\" \"key takeaway,\" and \"here's what this taught me\" read as performative content marketing. Tell what happened and what you think. A real lesson earns its place only if it would be news to the reader. If you cannot make the lesson more interesting than the story, cut it.",
+      "avoid": "Key takeaway: always trust your team.",
+      "prefer": "Flexible tools beat structured ones when the relationship is the product."
+    },
+    {
+      "id": "TONE-6",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Do not open a bio with \"passionate about\" or boilerplate",
+      "why": "Bios that open with \"passionate about,\" product pages that \"empower\" or \"streamline,\" and the Wikipedia-style \"Company X is a leading provider of…\" opener are all the averaged-out default that makes the writer sound like everyone else. Lead with what you make.",
+      "avoid": "I am a Senior Product Designer passionate about building great products.",
+      "prefer": "I build accessible, fast web interfaces, end to end."
+    },
+    {
+      "id": "TONE-7",
+      "category": "Tone and voice",
+      "strictness": "guideline",
+      "title": "Ground a personal intro in something human before the credential",
+      "why": "A line about where you live, what you make, or what you keep coming back to reads as a person. A job title alone reads as a record. Put the human detail first.",
+      "avoid": "Senior Staff Engineer, 12 years of experience.",
+      "prefer": "I'm a maker living in San Francisco, mostly building developer tools."
+    },
+    {
+      "id": "TONE-8",
+      "category": "Tone and voice",
+      "strictness": "guideline",
+      "title": "Hold warmth and technical precision at once",
+      "why": "The failure is treating these as a choice: dry spec-speak on one side, fluffy human filler on the other. Strong writing is precise about the facts and warm about the stakes in the same passage. Be exact about what happened and plain about why it mattered.",
+      "avoid": "The system achieved a 30% latency reduction across the board.",
+      "prefer": "We cut latency by about a third, which is the difference between the page feeling instant and feeling broken."
+    },
+    {
+      "id": "TONE-9",
+      "category": "Tone and voice",
+      "strictness": "strong-default",
+      "title": "Be direct about quality and critique",
+      "why": "Diplomatic hedging produces vague, non-actionable feedback, and softened findings dilute the point. A bug matters, an edge case matters, and a weak headline is weak. Say so plainly, then fix it.",
+      "avoid": "There might potentially be a minor concern worth possibly considering here.",
+      "prefer": "This silently drops the error. When the upload fails, the user sees a success message and loses the file."
+    },
+    {
+      "id": "TONE-10",
+      "category": "Tone and voice",
+      "strictness": "guideline",
+      "title": "Keep genuine reflection observational",
+      "why": "When you write about a loss or an uncertainty that is real, an over-apologetic tone undercuts the authority that honesty earns you. Calm observation reads as earned perspective. This is the register for true reflection, and it is distinct from the ban on inventing flaws (see SUBST-10).",
+      "avoid": "I'm so sorry to admit I completely failed at this and felt terrible.",
+      "prefer": "That decision did not hold up, and here is what it taught me."
+    },
+    {
+      "id": "TONE-11",
+      "category": "Tone and voice",
+      "strictness": "guideline",
+      "title": "Keep a distinct voice; do not over-correct into fake casualness",
+      "why": "Machine text lacks the quirks, humor, and frustration that signal a person, but overshooting into forced informality (\"Fellow humans, am I right?\") is worse than the original gloss. Aim for invisible editing, where the reader never thinks about how the text was written. ---",
+      "avoid": "Fellow humans, let's get real for a sec.",
+      "prefer": "Anyway, that is roughly how it went."
+    },
+    {
+      "id": "FORMAT-1",
+      "category": "Formatting and mechanics",
+      "strictness": "strong-default",
+      "title": "Do not add emojis, hashtags, or engagement bait unless asked",
+      "why": "Decorative inline emoji, emoji-prefixed bullet lists (✅, 🚀, 💡 leading each item), and hashtag tails are content-marketing decoration that signals performative writing. Add them only on explicit request.",
+      "avoid": "This changed everything. 🚀 #growth #buildinpublic",
+      "prefer": "This changed how the team shipped."
+    },
+    {
+      "id": "FORMAT-2",
+      "category": "Formatting and mechanics",
+      "strictness": "strong-default",
+      "title": "Do not bold every key term",
+      "why": "Machine output bolds a phrase in nearly every sentence to look emphatic and scannable. Over-bolding flattens emphasis until none of it lands. Bold a term when it genuinely needs to stand out, and rarely more than once per paragraph.",
+      "avoid": "Our **scalable** platform uses **cutting-edge** AI to **streamline** your **workflow**.",
+      "prefer": "Our platform uses AI to take the repetitive steps out of your workflow."
+    },
+    {
+      "id": "FORMAT-3",
+      "category": "Formatting and mechanics",
+      "strictness": "guideline",
+      "title": "Prefer sentence case for headings",
+      "why": "Title-casing every heading (\"How To Improve Your Workflow Today\") is a default machine reflex that reads as SEO copy. Sentence case reads as a person wrote it.",
+      "avoid": "Five Proven Strategies To Boost Team Productivity",
+      "prefer": "Five things that actually sped up our team"
+    },
+    {
+      "id": "FORMAT-4",
+      "category": "Formatting and mechanics",
+      "strictness": "guideline",
+      "title": "Do not editorialize emphasis with heavy italics or drama",
+      "why": "Italics on more than one or two words, and dashes used for drama, signal performed marketing copy. Let emphasis fall on the single word that carries the claim.",
+      "avoid": "This was the one thing that *truly, fundamentally* changed everything.",
+      "prefer": "This changed how the team shipped."
+    },
+    {
+      "id": "FORMAT-5",
+      "category": "Formatting and mechanics",
+      "strictness": "guideline",
+      "title": "Use headers sparingly and weave links into sentences",
+      "why": "Over-sectioning chops prose into fragments, and a bolted-on list of links reads as scaffolding. Sparse headers and inline links keep the writing flowing.",
+      "avoid": "",
+      "prefer": ""
+    },
+    {
+      "id": "FORMAT-6",
+      "category": "Formatting and mechanics",
+      "strictness": "guideline",
+      "title": "Vary heading shape; do not reuse a verb or pattern across neighbors",
+      "why": "Two consecutive headings of the same shape, or the same verb in back-to-back sections, read as a template tic. Matched gerund titles (\"Designing for Scale. Building for Speed.\") are the marketing-deck version. Lay the headings out in order and change any that echoes its neighbor. A heading should make a claim or name what is in the section, never just label the topic.",
+      "avoid": "What the team practices. / What the foundation carries.",
+      "prefer": "Pair sessions and review workflows. / Ten palettes on one token system."
+    },
+    {
+      "id": "FORMAT-7",
+      "category": "Formatting and mechanics",
+      "strictness": "guideline",
+      "title": "Match density to how the text will be read",
+      "why": "The medium sets the density. Text read on a phone wants short sentences and one-thought-per-line spacing. A long-form essay tolerates longer paragraphs. Keep paragraphs tight, roughly two to four sentences, and avoid walls of text.",
+      "avoid": "",
+      "prefer": ""
+    },
+    {
+      "id": "FORMAT-8",
+      "category": "Formatting and mechanics",
+      "strictness": "guideline",
+      "title": "End with a concrete ask",
+      "why": "A trailing \"feel free to reach out\" or \"I hope this helps\" is filler. If the piece wants a next step, name it directly.",
+      "avoid": "Feel free to reach out if you'd like to chat sometime.",
+      "prefer": "If this is your problem too, email me and we'll find 20 minutes."
+    },
+    {
+      "id": "FORMAT-9",
+      "category": "Formatting and mechanics",
+      "strictness": "strong-default",
+      "title": "Do not restate content across documents; link to the source",
+      "why": "Duplicating the same explanation in several places is a padding pattern, and it guarantees the copies drift out of sync. State a thing once, in its canonical home, and link to it from everywhere else. ---",
+      "avoid": "",
+      "prefer": ""
+    },
+    {
+      "id": "REVISE-1",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "The deletion test: if cutting a sentence loses only rhythm, cut it",
+      "why": "A sentence that exists purely for cadence is filler. The test isolates substance from ornament and forces the cut. The clause-level version: if you can remove a justification tail and still mean the same thing, remove it (see RHET-9).",
+      "avoid": "Made to hold up a year into iteration.",
+      "prefer": "(cut it)"
+    },
+    {
+      "id": "REVISE-2",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "The name-swap test, applied to the finished draft",
+      "why": "Before delivering, check that the piece contains at least one detail, belief, or specific that could belong to no one else (see SUBST-3). If a competitor could publish it unchanged, it is too generic.",
+      "avoid": "A results-driven professional dedicated to excellence.",
+      "prefer": "I keep coming back to the same problem at bigger scales: keeping software simple as it grows."
+    },
+    {
+      "id": "REVISE-3",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "The say-it-aloud test",
+      "why": "Phrases nobody would say to a friend (\"stakeholder alignment,\" \"drove synergy,\" \"world-class results\") betray written-for-no-one corporate prose. If you would roll your eyes saying a line aloud, rewrite it.",
+      "avoid": "I spearheaded cross-functional stakeholder alignment initiatives.",
+      "prefer": "I got the designers and engineers on the same page."
+    },
+    {
+      "id": "REVISE-4",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "Do not fix one cliché with another",
+      "why": "Avoiding one pattern often pushes you into a fresh repeated crutch, like opening every transition with \"That said.\" This secondary convergence is its own tell. Vary the fix, and sometimes use no transition at all.",
+      "avoid": "That said, sales rose. That said, costs fell. That said, we hired.",
+      "prefer": "Sales rose. Costs fell. We hired two people in the spring."
+    },
+    {
+      "id": "REVISE-5",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "Edit the surface; never change meaning, facts, or voice",
+      "why": "Tightening and humanizing edit the words, not the substance. A rewrite keeps the author's vocabulary and cadence, preserves the facts, and never dumbs the writing down. The target is clear and smart, not simplistic.",
+      "avoid": "",
+      "prefer": ""
+    },
+    {
+      "id": "REVISE-6",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "Never inflate; compress and sharpen, and add no buzzwords",
+      "why": "When editing, the job is to tighten and clarify, never to add accomplishments, grander language, or corporate words the source did not contain. Inflation reads as dishonest marketing. Default to equal or shorter length unless expansion was requested.",
+      "avoid": "",
+      "prefer": ""
+    },
+    {
+      "id": "REVISE-7",
+      "category": "Revision discipline",
+      "strictness": "guideline",
+      "title": "Edit to the essentials; do not enumerate everything",
+      "why": "Listing every project, responsibility, and tool reads as undisciplined and dilutes the strong items. Confidence comes from what you leave out. Pick the few that matter.",
+      "avoid": "Here are all 14 projects I worked on, in chronological order.",
+      "prefer": "Three projects that show what I care about."
+    },
+    {
+      "id": "REVISE-8",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "Do not write a revision against the draft it replaces",
+      "why": "After a correction, the goal is a cleaner output, not a visible apology for the previous draft. Showing the revision (\"instead of calling it a prototype, here is the real version\") is performance, and it leaves the same residue the feedback was meant to remove. Write the better version as if the earlier draft never existed.",
+      "avoid": "Instead of calling it a prototype, here's the real version: …",
+      "prefer": "(just write the better version)"
+    },
+    {
+      "id": "REVISE-9",
+      "category": "Revision discipline",
+      "strictness": "guideline",
+      "title": "For a line that has to land, generate several options, then choose",
+      "why": "Alignment training buries creative range under the most probable output: the safe metaphor, the obvious beat. For an opening line, a tagline, or any sentence that has to carry weight, draft four or five options ranging from conventional to unexpected, then pick. Skip this for factual or mechanical edits.",
+      "avoid": "",
+      "prefer": ""
+    },
+    {
+      "id": "REVISE-10",
+      "category": "Revision discipline",
+      "strictness": "hard-ban",
+      "title": "Strip assistant scaffolding before delivering",
+      "why": "Model disclaimers and chat scaffolding must never survive into delivered copy: \"As an AI language model,\" \"As of my last knowledge update,\" \"I cannot browse,\" \"I hope this helps,\" \"Let me know if you'd like me to….\" They are pure leakage and the most obvious possible tell.",
+      "avoid": "As an AI language model, I hope this overview helps. Let me know if you'd like more detail!",
+      "prefer": "(cut all of it)"
+    },
+    {
+      "id": "REVISE-11",
+      "category": "Revision discipline",
+      "strictness": "strong-default",
+      "title": "Run a final anti-slop pass",
+      "why": "A concrete checklist catches the recurring tells before they ship. Scanning on every delivery is what keeps the named patterns out of final copy. Use [`CHECKLIST.md`](CHECKLIST.md).",
+      "avoid": "",
+      "prefer": ""
+    }
+  ]
+}
