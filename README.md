@@ -34,7 +34,7 @@ Plenty of good advice about this is scattered across style guides, editing forum
 
 ## Install
 
-Slopspeare is also an installable agent skill. With the [`skills` CLI](https://github.com/vercel-labs/skills):
+Slopspeare is also an installable agent skill for Claude Code and compatible agents. Install it with the [`skills` CLI](https://github.com/vercel-labs/skills), which adds agent-skill packages to your local AI tool:
 
 ```bash
 npx skills add davidvictor/slopspeare
@@ -75,7 +75,7 @@ Commands:
   the scope. Given a file path, it edits in place.
 - **score.** The tier counts and a one-line read.
 - **comment.** Findings as paste-ready review citations for a pull request.
-- **watch / gate.** The skill runs its own output through the final-pass checklist before returning. For always-on scanning of an agent's drafts, see the `Stop` hook note below.
+- **watch / gate.** The skill runs its own output through the final-pass checklist before returning.
 
 For project-specific rules, drop a `slopspeare.local.md` in your repo and the skill
 layers it on top of the public catalog. See `slopspeare.local.example.md`.
