@@ -1,3 +1,12 @@
+```
+                                       
+     _                                 
+ ___| |___ ___ ___ ___ ___ ___ ___ ___ 
+|_ -| | . | . |_ -| . | -_| .'|  _| -_|
+|___|_|___|  _|___|  _|___|__,|_| |___|
+          |_|     |_|                  
+```
+
 # Slopspeare
 
 A field guide to removing AI slop from writing.
@@ -44,6 +53,12 @@ A real writer breaks any of these on purpose sometimes. The difference between a
 ## Scope
 
 Slopspeare is about written prose. It does not cover visual design, code style, or the structure of a specific document type. It is general-purpose by design, so it avoids any one person's house style. If you keep a house style, adopt Slopspeare as the base layer and add your specifics on top.
+
+## Build in public
+
+Slopspeare started as a private correction loop. The same handful of tells kept showing up in my own drafts and in everything my AI tools wrote for me: the em dash bridging every other sentence, the "X, not Y" contrast reflex, the puffed-up vocabulary that turns any sentence into a press release. I would fix them, and they would come back in the next draft.
+
+So I wrote the rules down. Then I noticed the same guidance was scattered across my notes, my portfolio repo, and a stack of installed tools, often disagreeing with itself. This repo is the deduplicated, conflict-resolved version of all of it, generalized so anyone can use it.
 
 ## Credits and sources
 
