@@ -7,3 +7,6 @@
 
 # Node (only if tooling is added later)
 node_modules/
+
+# Local superpowers specs and plans (not published)
+docs/superpowers/
