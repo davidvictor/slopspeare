@@ -75,6 +75,7 @@ Commands:
   the scope. Given a file path, it edits in place.
 - **score.** The tier counts and a one-line read.
 - **comment.** Findings as paste-ready review citations for a pull request.
+- **watch / gate.** The skill runs its own output through the final-pass checklist before returning. For always-on scanning of an agent's drafts, see the `Stop` hook note below.
 
 For project-specific rules, drop a `slopspeare.local.md` in your repo and the skill
 layers it on top of the public catalog. See `slopspeare.local.example.md`.
@@ -108,7 +109,6 @@ So I wrote the rules down. Then I noticed the same guidance was scattered across
 This guide is a synthesis. It draws on:
 
 - Public catalogs of AI writing tells, including Wikipedia's "Signs of AI writing," GPTZero's overused-vocabulary research, and community editing notes.
-- The `humanize-writing` editing skill and its AI-patterns dictionary.
 - A design-leader copywriting style guide modeled on the public writing of designers and founders.
 - Document-generation and review tooling that ships its own slop-scan rules.
 - A working portfolio writing system maintained across many drafts and manual edits.
