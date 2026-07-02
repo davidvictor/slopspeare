@@ -23,7 +23,7 @@ jobs:
 
       - name: Fail if generated files differ from committed versions
         run: |
-          if ! git diff --exit-code rules.json .well-known/agent-skills; then
+          if ! git diff --exit-code rules.json skills/slopspeare .well-known/agent-skills; then
             echo ""
             echo "Generated skill files are out of sync."
             echo "Run:"

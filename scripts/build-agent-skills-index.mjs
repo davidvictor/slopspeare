@@ -7,8 +7,9 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(__dirname, "..");
 const skillName = "slopspeare";
-const packageRoot = join(repoRoot, ".well-known", "agent-skills");
-const skillRoot = join(packageRoot, skillName);
+const skillPackageRoot = join(repoRoot, "skills", skillName);
+const wellKnownRoot = join(repoRoot, ".well-known", "agent-skills");
+const wellKnownSkillRoot = join(wellKnownRoot, skillName);
 
 const files = [
   "SKILL.md",
@@ -22,7 +23,7 @@ const files = [
 ];
 
 async function readDescription() {
-  const skillMd = await readFile(join(repoRoot, "SKILL.md"), "utf8");
+  const skillMd = await readFile(join(skillPackageRoot, "SKILL.md"), "utf8");
   const match = skillMd.match(/^---\n([\s\S]*?)\n---/);
   if (!match) {
     throw new Error("SKILL.md is missing YAML frontmatter.");
@@ -48,15 +49,40 @@ async function readDescription() {
     .join(" ");
 }
 
-async function copyPackageFiles() {
-  await rm(skillRoot, { force: true, recursive: true });
+function sourcePathFor(file) {
+  if (file === "SKILL.md") {
+    return join(skillPackageRoot, file);
+  }
+
+  return join(repoRoot, file);
+}
+
+function normalizeText(content) {
+  return content.replace(/[ \t]+$/gm, "").replace(/\n+$/, "\n");
+}
+
+async function copyFile(file, targetRoot) {
+  const target = join(targetRoot, file);
+  await mkdir(dirname(target), { recursive: true });
+  const content = await readFile(sourcePathFor(file), "utf8");
+  await writeFile(target, normalizeText(content));
+}
+
+async function copySkillPackageFiles() {
+  for (const file of files) {
+    if (file === "SKILL.md") {
+      continue;
+    }
+
+    await copyFile(file, skillPackageRoot);
+  }
+}
+
+async function copyWellKnownFiles() {
+  await rm(wellKnownSkillRoot, { force: true, recursive: true });
 
   for (const file of files) {
-    const source = join(repoRoot, file);
-    const target = join(skillRoot, file);
-    await mkdir(dirname(target), { recursive: true });
-    const content = await readFile(source, "utf8");
-    await writeFile(target, content.replace(/[ \t]+$/gm, "").replace(/\n+$/, "\n"));
+    await copyFile(file, wellKnownSkillRoot);
   }
 }
 
@@ -71,14 +97,15 @@ async function writeIndex(description) {
     ],
   };
 
-  await mkdir(packageRoot, { recursive: true });
+  await mkdir(wellKnownRoot, { recursive: true });
   await writeFile(
-    join(packageRoot, "index.json"),
+    join(wellKnownRoot, "index.json"),
     `${JSON.stringify(index, null, 2)}\n`,
   );
 }
 
-await copyPackageFiles();
+await copySkillPackageFiles();
+await copyWellKnownFiles();
 await writeIndex(await readDescription());
 
-console.log(`Wrote ${basename(packageRoot)}/${skillName} with ${files.length} files.`);
+console.log(`Wrote ${basename(skillPackageRoot)} and agent-skills/${skillName} with ${files.length} files.`);

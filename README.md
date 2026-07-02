@@ -30,6 +30,7 @@ Plenty of good advice about this is scattered across style guides, editing forum
 | [`docs/quick-reference.md`](docs/quick-reference.md) | A one-screen cheat sheet of the worst tells and instant fixes. |
 | [`CONFLICTS.md`](CONFLICTS.md) | Where the source material disagreed, and how the guide resolved it. |
 | [`rules.json`](rules.json) | The same rules in machine-readable form, for linters and other tooling. |
+| [`skills/slopspeare/`](skills/slopspeare/) | The installable agent skill package. |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to propose a new rule or change an existing one. |
 
 ## Install
