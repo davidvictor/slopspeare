@@ -7,7 +7,7 @@ on:
 
 jobs:
   sync-check:
-    name: Verify rules.json matches RULES.md
+    name: Verify generated skill files match sources
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,15 +16,19 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Rebuild rules.json from RULES.md
-        run: node scripts/build-rules-json.mjs
-
-      - name: Fail if rules.json differs from committed version
+      - name: Rebuild generated files
         run: |
-          if ! git diff --exit-code rules.json; then
+          node scripts/build-rules-json.mjs
+          node scripts/build-agent-skills-index.mjs
+
+      - name: Fail if generated files differ from committed versions
+        run: |
+          if ! git diff --exit-code rules.json .well-known/agent-skills; then
             echo ""
-            echo "rules.json is out of sync with RULES.md."
-            echo "Run: node scripts/build-rules-json.mjs"
-            echo "Then commit the updated rules.json."
+            echo "Generated skill files are out of sync."
+            echo "Run:"
+            echo "  node scripts/build-rules-json.mjs"
+            echo "  node scripts/build-agent-skills-index.mjs"
+            echo "Then commit the updated generated files."
             exit 1
           fi

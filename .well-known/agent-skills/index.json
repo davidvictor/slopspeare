@@ -1,0 +1,18 @@
+{
+  "skills": [
+    {
+      "name": "slopspeare",
+      "description": "Use when the user wants prose audited or cleaned of AI writing tells and names the intent: \"de-slop this,\" \"remove the AI slop,\" \"does this sound like AI,\" \"scan this for slop,\" \"check this against slopspeare,\" or asks to review a draft and cite which rules it breaks. Runs a rule-ID-cited scan across eight categories (PUNCT, RHET, VOCAB, SUBST, STRUCT, TONE, FORMAT, REVISE) with three severity tiers, then optionally edits the draft to fix what it finds. Prose only: bios, landing-page copy, case studies, docs, blog posts, social posts, release notes. Not for code, code comments, commit messages, API reference, or formal academic writing. Triggers on: slop, de-slop, AI writing, AI tells, slopspeare, lint prose, anti-slop, writing review, rule IDs.",
+      "files": [
+        "SKILL.md",
+        "RULES.md",
+        "CHECKLIST.md",
+        "docs/quick-reference.md",
+        "rules.json",
+        "CONFLICTS.md",
+        "LICENSE",
+        "slopspeare.local.example.md"
+      ]
+    }
+  ]
+}
